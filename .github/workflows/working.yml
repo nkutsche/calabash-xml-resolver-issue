@@ -27,7 +27,7 @@ jobs:
       - name: Build with Maven
         run: mvn -f module/pom.xml install && mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.4-100 -Dxml.resolver=2.1.1
         
-  build154-520:
+  build154-512:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -37,7 +37,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build with Maven
-        run: mvn -f module/pom.xml install && mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.4-100 -Dxml.resolver=5.2.0
+        run: mvn -f module/pom.xml install && mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.4-100 -Dxml.resolver=5.1.2
         
   build153-211:
     runs-on: ubuntu-latest
@@ -51,7 +51,7 @@ jobs:
       - name: Build with Maven
         run: mvn -f module/pom.xml install && mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.3-100 -Dxml.resolver=2.1.1
         
-  build153-520:
+  build153-460:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -61,4 +61,4 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build with Maven
-        run: mvn -f module/pom.xml install && mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.3-100 -Dxml.resolver=5.2.0
+        run: mvn -f module/pom.xml install && mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.3-100 -Dxml.resolver=4.6.0
