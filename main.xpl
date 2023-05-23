@@ -5,16 +5,6 @@
     
     <p:import href="http://www.data2type.de/xpl/module.xpl"/>
     
-    <p:identity>
-        <p:input port="source">
-            <p:inline>
-                <dummy/>
-            </p:inline>
-        </p:input>
-    </p:identity>
-    
     <d2t:module/>
-    
-    <p:store href="out.xml"/>
     
 </p:declare-step>
