@@ -25,7 +25,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build with Maven
-        run: mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.6-100 -Dxml.resolver=2.1.1 -Dexec.args="-cp %%classpath;module com.xmlcalabash.drivers.Main main.xpl"
+        run: mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.6-100 -Dxml.resolver=2.1.1
         
   build156-520:
     runs-on: ubuntu-latest
@@ -37,7 +37,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build with Maven
-        run: mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.6-100 -Dxml.resolver=5.2.0 -Dexec.args="-cp %%classpath;module com.xmlcalabash.drivers.Main main.xpl"
+        run: mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.6-100 -Dxml.resolver=5.2.0
         
   build132-211:
     runs-on: ubuntu-latest
@@ -49,4 +49,4 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build with Maven
-        run: mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.3.2-100 -Dxml.resolver=2.1.1 -Dexec.args="-cp %%classpath;module com.xmlcalabash.drivers.Main main.xpl"
+        run: mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.3.2-100 -Dxml.resolver=2.1.1
