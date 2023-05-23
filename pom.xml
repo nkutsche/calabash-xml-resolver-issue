@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>de.data2type</groupId>
+    <artifactId>xml-resolver-issues</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    
+    <properties>
+        <!--
+            Dependency Versions
+        -->
+<!--        <xmlcalabash.version>1.3.2-100</xmlcalabash.version>-->
+        <xmlcalabash.version>1.5.6-100</xmlcalabash.version>
+        
+<!--        <xml.resolver>5.2.0</xml.resolver>-->
+        <xml.resolver>2.1.1</xml.resolver>
+    </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.xmlcalabash/xmlcalabash -->
+        <dependency>
+            <groupId>com.xmlcalabash</groupId>
+            <artifactId>xmlcalabash</artifactId>
+            <version>${xmlcalabash.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.xmlresolver/xmlresolver -->
+        <dependency>
+            <groupId>org.xmlresolver</groupId>
+            <artifactId>xmlresolver</artifactId>
+            <version>${xml.resolver}</version>
+        </dependency>
+        
+    </dependencies>
+    
+    <repositories>
+        <!--    
+    some dependency of Calabash which is not on Maven Central
+    -->
+        <repository>
+            <id>spring</id>
+            <url>https://maven.restlet.talend.com</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        
+    </repositories>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                
+                <configuration>
+                    <additionalClasspathElements>${project.basedir}/module/</additionalClasspathElements>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    
+</project>
