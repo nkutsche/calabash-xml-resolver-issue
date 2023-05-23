@@ -55,11 +55,6 @@
     </repositories>
     
     <build>
-        <resources>
-            <resource>
-                <directory>module/</directory>
-            </resource>
-        </resources>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -73,7 +68,6 @@
                         <argument>com.xmlcalabash.drivers.Main</argument>
                         <argument>main.xpl</argument>
                     </arguments>
-                    <addResourcesToClasspath>true</addResourcesToClasspath>
                 </configuration>
             </plugin>
         </plugins>
