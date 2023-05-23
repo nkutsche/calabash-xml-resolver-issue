@@ -11,5 +11,8 @@
         <cx:message>
             <p:with-option name="message" select="'static-base-uri: ' || static-base-uri()"/>
         </cx:message>
+        <cx:message>
+            <p:with-option name="message" select="'unparsed-text-available: ' || unparsed-text-available('../txt/unparsed-text.txt')"/>
+        </cx:message>
     </p:declare-step>
 </p:library>
