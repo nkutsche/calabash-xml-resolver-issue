@@ -20,6 +20,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>de.data2type</groupId>
+            <artifactId>xml-resolver-issues-module</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/com.xmlcalabash/xmlcalabash -->
         <dependency>
             <groupId>com.xmlcalabash</groupId>
