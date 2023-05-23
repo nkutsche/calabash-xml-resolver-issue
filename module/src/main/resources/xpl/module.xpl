@@ -15,6 +15,14 @@
         <cx:message>
             <p:with-option name="message" select="'unparsed-text-available: ' || unparsed-text-available('../txt/unparsed-text.txt')"/>
         </cx:message>
+        <cx:message>
+            <p:with-option name="message" select="
+                'unparsed-text: ' || 
+                (if(unparsed-text-available('../txt/unparsed-text.txt')) 
+                then unparsed-text('../txt/unparsed-text.txt') 
+                else '#NA#')
+                "/>
+        </cx:message>
         <p:sink/>
     </p:declare-step>
     
