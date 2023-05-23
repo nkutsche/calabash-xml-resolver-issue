@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build156-211:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,4 +25,28 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build with Maven
-        run: mvn exec:exec -Dexec.executable="java" -Dexec.args="-cp %%classpath;module com.xmlcalabash.drivers.Main main.xpl" -Dxml.resolver=2.1.1
+        run: mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.6-100 -Dxml.resolver=2.1.1 -Dexec.args="-cp %%classpath;module com.xmlcalabash.drivers.Main main.xpl"
+        
+  build156-520:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build with Maven
+        run: mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.5.6-100 -Dxml.resolver=5.2.0 -Dexec.args="-cp %%classpath;module com.xmlcalabash.drivers.Main main.xpl"
+        
+  build132-211:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build with Maven
+        run: mvn exec:exec -Dexec.executable="java" -Dxmlcalabash.version=1.3.2-100 -Dxml.resolver=2.1.1 -Dexec.args="-cp %%classpath;module com.xmlcalabash.drivers.Main main.xpl"
